@@ -1,8 +1,12 @@
-# React + Vite
+# DevJokes API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern frontend application built with JavaScript and React, using Vite for fast builds and development. It leverages npm for package management and styled-components for styling. The project includes essential plugins like @vitejs/plugin-react and @vitejs/plugin-react-swc for an enhanced development experience. For routing, react-router-dom is used, and axios is utilized for making HTTP requests.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack and Packages Used
+- **Languages and Libraries**: JavaScript, React
+- **Build Tools**: Vite
+- **Package Manager**: npm
+- **Styling**: styled-components
+- **Plugins**: @vitejs/plugin-react, @vitejs/plugin-react-swc
+- **Routing**: react-router-dom
+- **HTTP Client**: axios
