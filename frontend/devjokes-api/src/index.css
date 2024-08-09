@@ -3,6 +3,7 @@
 
 :root {
   font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,6 +18,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*Colors*/
   --color-pink: #FB7BB8;
   --color-purple:#7364DB;
   --color-light-blue: #2775FF;
@@ -24,6 +27,18 @@
   --color-font-bright:#EAEAF4;
   --color-dark:#16161E;
   --gradient: linear-gradient(220deg, #50D1B2 0%, #824EDB 40.48%, #DD50D6 80.96%);
+
+  /*Fonts*/
+  --fontsize-nav: 1rem;
+  --fontsize-title: 2.2rem;
+  --fontsize-subtitle: 1rem;
+  --fontsize-tabnav:0.8rem;
+  --fontsize-sectiontitle: 1.75rem;
+  --fontsize-cardquestion: 1.75rem;
+  --fontsize-cardpunchline: 1.25rem;
+  --fontweight-title: 700;
+  --fontweight-subtitle: 500;
+  --fontweight-card:600;
 
 
 }
