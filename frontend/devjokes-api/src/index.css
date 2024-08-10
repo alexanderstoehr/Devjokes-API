@@ -40,6 +40,11 @@
   --fontweight-subtitle: 500;
   --fontweight-card:600;
 
+  /*Borders*/
+  --border-radius-big:1rem;
+  --border-radius-mid: 0.75rem;
+  --border-radius-small:0.25rem;
+
 
 }
 
