@@ -61,7 +61,13 @@ body {
 }
 
 h1 {
-    font-size: 3.2em;
+    font-size: var(--fontsize-title);
+    line-height: 1.1;
+    color: var(--color-font-bright);
+}
+
+h2 {
+    font-size: var(--fontsize-subtitle);
     line-height: 1.1;
     color: var(--color-font-bright);
 }

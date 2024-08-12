@@ -1,7 +1,13 @@
+import {HeroStyled} from "../styles/globalStyles.js";
+
 export default function Hero() {
     return (
-        <div className="hero">
-            <h1>Dev Jokes</h1>
-        </div>
+        <HeroStyled>
+            <div className="hero-text">
+                <h1>Dev Jokes API</h1>
+                <h2>CRUD your Favourite jokes.</h2>
+            </div>
+            <h1>IMG</h1>
+        </HeroStyled>
     )
 }
