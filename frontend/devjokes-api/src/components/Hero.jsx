@@ -1,4 +1,6 @@
 import {HeroStyled} from "../styles/globalStyles.js";
+import JokeButton from "./JokeButton.jsx";
+import Joke from "./Joke.jsx";
 
 export default function Hero() {
     return (
@@ -6,8 +8,9 @@ export default function Hero() {
             <div className="hero-text">
                 <h1>Dev Jokes API</h1>
                 <h2>CRUD your Favourite jokes.</h2>
+                <JokeButton/>
             </div>
-            <h1>IMG</h1>
+            <Joke/>
         </HeroStyled>
     )
 }

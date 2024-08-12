@@ -61,5 +61,6 @@ export const HeroStyled = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     justify-content: center;
-    
+    width: 100%;
+
 `;
