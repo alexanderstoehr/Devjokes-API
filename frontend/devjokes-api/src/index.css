@@ -1,72 +1,88 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    box-sizing: border-box;
+    margin: 0;
 
-  box-sizing: border-box;
-  margin: 0;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /*Colors*/
+    --color-pink: #FB7BB8;
+    --color-purple: #7364DB;
+    --color-light-blue: #2775FF;
+    --color-dark-blue: #5415F1;
+    --color-font-bright: #EAEAF4;
+    --color-dark: #16161E;
+    --gradient: linear-gradient(220deg, #50D1B2 0%, #824EDB 40.48%, #DD50D6 80.96%);
 
-  /*Colors*/
-  --color-pink: #FB7BB8;
-  --color-purple:#7364DB;
-  --color-light-blue: #2775FF;
-  --color-dark-blue:#5415F1;
-  --color-font-bright:#EAEAF4;
-  --color-dark:#16161E;
-  --gradient: linear-gradient(220deg, #50D1B2 0%, #824EDB 40.48%, #DD50D6 80.96%);
+    /*Fonts*/
+    --fontsize-nav: 1rem;
+    --fontsize-title: 2.2rem;
+    --fontsize-subtitle: 1rem;
+    --fontsize-tabnav: 0.8rem;
+    --fontsize-sectiontitle: 1.75rem;
+    --fontsize-cardquestion: 1.75rem;
+    --fontsize-cardpunchline: 1.25rem;
+    --fontweight-title: 700;
+    --fontweight-subtitle: 500;
+    --fontweight-card: 600;
 
-  /*Fonts*/
-  --fontsize-nav: 1rem;
-  --fontsize-title: 2.2rem;
-  --fontsize-subtitle: 1rem;
-  --fontsize-tabnav:0.8rem;
-  --fontsize-sectiontitle: 1.75rem;
-  --fontsize-cardquestion: 1.75rem;
-  --fontsize-cardpunchline: 1.25rem;
-  --fontweight-title: 700;
-  --fontweight-subtitle: 500;
-  --fontweight-card:600;
-
-  /*Borders*/
-  --border-radius-big:1rem;
-  --border-radius-mid: 0.75rem;
-  --border-radius-small:0.25rem;
+    /*Borders*/
+    --border-radius-big: 1rem;
+    --border-radius-mid: 0.75rem;
+    --border-radius-small: 0.25rem;
 
 
 }
 
-a {}
-a:hover {}
+a {
+    color: unset;
+}
+
+a:hover {
+    color: var(--color-pink)
+}
 
 body {
-  display: flex;
-  width: 100vw;
-  min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color-dark);
+
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: var(--color-font-bright);
 }
 
-button {}
-button:hover {}
+button {
+}
+
+button:hover {
+}
+
 button:focus,
-button:focus-visible {}
+button:focus-visible {
+}
 
 @media (prefers-color-scheme: light) {
-  :root {}
+    :root {
+    }
+}
+
+a.grower:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+
 }
