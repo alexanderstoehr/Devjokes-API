@@ -1,7 +1,11 @@
-export default function Footer () {
+import {StackBoxStyled} from "../styles/globalStyles.js";
+
+export default function Footer() {
     return (
-        <footer>
-            <h1>Footer</h1>
-        </footer>
+        <StackBoxStyled>
+            <img src="/logo-reactjs.svg"/>
+            <img src="/logo-djangoproject.svg"/>
+            <img src="/logo-sqlite.svg"/>
+        </StackBoxStyled>
     )
 }
