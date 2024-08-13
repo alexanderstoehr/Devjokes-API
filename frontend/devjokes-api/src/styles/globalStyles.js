@@ -55,6 +55,25 @@ export const HeaderStyled = styled.header`
     }
 `;
 
+
+export const JokeCardStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    color: var(--color-font-bright);
+
+    .question {
+        font-size: var(--fontsize-cardquestion);
+    }
+
+    .punchline {
+        font-size: var(--fontsize-cardpunchline);
+    }
+
+    img {
+        width: 50px;
+    }
+`;
+
 export const StackBoxStyled = styled.footer`
     position: relative;
     display: flex;
