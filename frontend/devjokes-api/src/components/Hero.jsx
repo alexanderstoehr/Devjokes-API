@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <HeroStyled>
             <div className="hero-text">
-                <h1>Dev Jokes API</h1>
+                <h1>DEVJOKES API</h1>
                 <h2>CRUD your Favourite jokes.</h2>
                 <JokeButton/>
             </div>
