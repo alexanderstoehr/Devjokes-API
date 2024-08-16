@@ -8,6 +8,7 @@ export const MainContentStyled = styled.div`
     width: 1000px;
     min-height: 100vh;
     padding: 0 20px;
+    gap: 2rem;
 `;
 
 export const HeaderStyled = styled.header`
@@ -16,7 +17,6 @@ export const HeaderStyled = styled.header`
     align-items: center;
     width: 100%;
     padding: 20px 0;
-    margin-bottom: 2rem;
 
     .nav-box {
         display: flex;
