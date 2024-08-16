@@ -87,6 +87,15 @@ export const JokeCardStyled = styled.div`
     }
 `;
 
+export const HeroStyled = styled.section`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+`;
 export const StackBoxStyled = styled.footer`
     position: relative;
     display: flex;
@@ -119,13 +128,17 @@ export const StackBoxStyled = styled.footer`
 
 `;
 
-
-export const HeroStyled = styled.section`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+export const JokeButtonStyled = styled.button`
+    display: flex;
+    width: 171px;
+    height: 32px;
+    padding: 0px 24px;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 8px;
+    flex-shrink: 0;
+    background-color: ${(props) => `var(${props.color})`};
 
 `;
+
+
