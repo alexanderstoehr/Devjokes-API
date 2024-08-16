@@ -95,7 +95,38 @@ export const HeroStyled = styled.section`
     align-items: center;
     width: 100%;
 
+    .hero-text {
+        padding-bottom: 4rem;
+    }
+
+    h1 {
+        line-height: 70%;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
 `;
+
+export const JokeButtonStyled = styled.button`
+    display: flex;
+    width: 200px;
+    height: 32px;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: ${(props) => `var(${props.color})`};
+    color: var(--color-font-bright);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 150%;
+    border-radius: var(--border-radius-small);
+
+`;
+
+
 export const StackBoxStyled = styled.footer`
     position: relative;
     display: flex;
@@ -127,18 +158,3 @@ export const StackBoxStyled = styled.footer`
     }
 
 `;
-
-export const JokeButtonStyled = styled.button`
-    display: flex;
-    width: 171px;
-    height: 32px;
-    padding: 0px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    background-color: ${(props) => `var(${props.color})`};
-
-`;
-
-
