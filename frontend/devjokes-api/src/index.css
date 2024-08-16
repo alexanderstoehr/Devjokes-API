@@ -26,10 +26,12 @@
     --color-font-bright: #EAEAF4;
     --color-dark: #16161E;
     --gradient: linear-gradient(220deg, #50D1B2 0%, #824EDB 40.48%, #DD50D6 80.96%);
+    --transparent-gradient: linear-gradient(220deg, rgba(80, 209, 178, 0.12) 0%, rgba(130, 78, 219, 0.12) 40.18%, rgba(221, 80, 214, 0.12) 80.96%);
+
 
     /*Fonts*/
     --fontsize-nav: 1rem;
-    --fontsize-title: 2.2rem;
+    --fontsize-title: 2.5rem;
     --fontsize-subtitle: 1rem;
     --fontsize-tabnav: 0.8rem;
     --fontsize-sectiontitle: 1.75rem;
@@ -64,10 +66,24 @@ body {
 
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--transparent-gradient);
+    z-index: 1;
+    pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+}
+
+
 h1 {
     font-size: var(--fontsize-title);
     line-height: 1.1;
     color: var(--color-font-bright);
+    margin: 0;
 }
 
 h2 {
