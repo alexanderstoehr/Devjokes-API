@@ -1,0 +1,6 @@
+name: devjokes
+dependencies:
+    - python=3.12.4
+    - pip=24.2
+    - pip:
+        - django=5.1
