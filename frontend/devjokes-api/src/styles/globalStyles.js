@@ -16,6 +16,7 @@ export const HeaderStyled = styled.header`
     align-items: center;
     width: 100%;
     padding: 20px 0;
+    margin-bottom: 2rem;
 
     .nav-box {
         display: flex;
@@ -59,18 +60,30 @@ export const HeaderStyled = styled.header`
 export const JokeCardStyled = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 420px;
+    height: 400px;
+    background-image: var(--gradient);
+    border-radius: var(--border-radius-big);
+    padding: 5rem 3rem 3rem 3rem;
     color: var(--color-font-bright);
 
     .question {
         font-size: var(--fontsize-cardquestion);
+        font-weight: var(--fontweight-card);
+        line-height: 34px; /* 121.429% */
+        margin-bottom: 1rem;
+
     }
 
     .punchline {
         font-size: var(--fontsize-cardpunchline);
+        font-weight: var(--fontweight-card);
     }
 
     img {
         width: 50px;
+        justify-self: flex-end;
     }
 `;
 
@@ -112,6 +125,7 @@ export const HeroStyled = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
 `;
