@@ -3,9 +3,6 @@ import {useState} from "react";
 
 export default function JokeButton() {
 
-    const [buttonColor, setButtonColor] = useState();
-
-
     const buttonColors = [
         "--color-pink",
         "--color-purple",
@@ -22,22 +19,29 @@ export default function JokeButton() {
         "Try a dirty one"
     ]
 
-    const pickRandomItem = (arr) => {
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        return arr[randomIndex]
+
+    const pickRandomItem = (arr, currentItem) => {
+        let newItem
+        do {
+            const randomIndex = Math.floor(Math.random() * arr.length);
+            newItem = arr[randomIndex]
+        } while (newItem === currentItem)
+        return newItem
     }
 
     console.log(pickRandomItem(buttonColors));
 
     const handleClick = () => {
-        let newColor
-        do {
-            newColor = pickRandomItem(buttonColors)
-        } while (newColor === buttonColor)
-        setButtonColor(newColor);
+        setButtonColor(pickRandomItem(buttonColors, buttonColor));
+        setButtonText(pickRandomItem(buttonTexts, buttonText));
+
     }
 
+    const [buttonColor, setButtonColor] = useState(pickRandomItem(buttonColors));
+    const [buttonText, setButtonText] = useState(pickRandomItem(buttonTexts));
+
+
     return (
-        <JokeButtonStyled onClick={() => handleClick()} color={pickRandomItem(buttonColors)}>Get a Joke</JokeButtonStyled>
+        <JokeButtonStyled onClick={() => handleClick()} color={buttonColor}>{buttonText}</JokeButtonStyled>
     );
 }
