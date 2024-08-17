@@ -8,7 +8,7 @@ export const MainContentStyled = styled.div`
     width: 1000px;
     min-height: 100vh;
     padding: 0 20px;
-    gap: 2rem;
+    gap: 8rem;
 `;
 
 export const HeaderStyled = styled.header`
@@ -17,6 +17,7 @@ export const HeaderStyled = styled.header`
     align-items: center;
     width: 100%;
     padding: 20px 0;
+    margin-bottom: -6rem;
 
     .nav-box {
         display: flex;
@@ -111,15 +112,14 @@ export const HeroStyled = styled.section`
 
 export const JokeButtonStyled = styled.button`
     display: flex;
-    width: 200px;
-    height: 32px;
-    padding: 0px 24px;
+    width: 250px;
+    padding: 12px 24px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     background-color: ${(props) => `var(${props.color})`};
     color: var(--color-font-bright);
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 150%;
     border-radius: var(--border-radius-small);
