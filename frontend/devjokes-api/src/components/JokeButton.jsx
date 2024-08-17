@@ -37,8 +37,8 @@ export default function JokeButton() {
 
     }
 
-    const [buttonColor, setButtonColor] = useState(pickRandomItem(buttonColors));
-    const [buttonText, setButtonText] = useState(pickRandomItem(buttonTexts));
+    const [buttonColor, setButtonColor] = useState("--color-purple");
+    const [buttonText, setButtonText] = useState("Get a Joke");
 
 
     return (
