@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     # custom apps
     'user',
     'joke',
+
+    # 3rd Party
+    "rest_framework",
     ]
 
 MIDDLEWARE = [
