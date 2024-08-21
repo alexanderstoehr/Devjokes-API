@@ -14,3 +14,9 @@ class JokeSerializer(serializers.ModelSerializer):
         model = Joke
         fields = '__all__'
         read_only_fields = ['likes']
+
+
+class CreateJokeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Joke
+        fields = ['question', 'punchline']

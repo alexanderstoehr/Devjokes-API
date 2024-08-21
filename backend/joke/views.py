@@ -7,7 +7,7 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.response import Response
 
 from joke.models import Joke
-from joke.serializers import JokeSerializer
+from joke.serializers import JokeSerializer, CreateJokeSerializer
 
 
 # Create your views here.
@@ -23,7 +23,11 @@ class ListCreateJokeView(ListCreateAPIView):
     Post a new joke.
     '''
     queryset = Joke.objects.all()
-    serializer_class = JokeSerializer
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return CreateJokeSerializer
+        return JokeSerializer
 
 
 # view to delete a joke
