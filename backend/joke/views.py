@@ -1,6 +1,8 @@
 from django.db.models import Q
 from django.shortcuts import render
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView
+from rest_framework import status
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.response import Response
 
 from joke.models import Joke
 from joke.serializers import JokeSerializer
@@ -8,22 +10,22 @@ from joke.serializers import JokeSerializer
 
 # Create your views here.
 
-# create a view to list all the jokes
-# create a view to post a joke
+# view to list all the jokes
+# view to post a joke
 class ListCreateJokeView(ListCreateAPIView):
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
 
 
-# create a view to delete a joke
-# create a view to patch a joke
-# create a view to get a single joke
+# view to delete a joke
+# view to patch a joke
+# view to get a single joke
 class RetrieveUpdateDestroyJokeView(RetrieveUpdateDestroyAPIView):
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
 
 
-# create a view to search for a joke
+# view to search for a joke
 class SearchJokeView(ListAPIView):
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
@@ -32,11 +34,31 @@ class SearchJokeView(ListAPIView):
         search_term = self.kwargs['search_term']
         return Joke.objects.filter(Q(punchline__icontains=search_term) | Q(question__icontains=search_term))  # icontains is case insensitive
 
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        if not queryset.exists():
+            return Response({"message": "Your search does not return any jokes. Sorry."}, status=status.HTTP_204_NO_CONTENT)
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
 
-# create a view to get a random joke
-class RandomJokeView(ListCreateAPIView):
-    pass
 
-# deleting is for the author or the superuser only
-# post and patch is allowed for authenticated users only
-# if not authenticated, one custom response message for post patch (saying that authentication is needed) and one for delete (saying that only the author can delete it)
+# view to get a random joke
+class RandomJokeView(RetrieveAPIView):
+    # get queryset length, get a random number, get the joke with that number
+    queryset = Joke.objects.all()
+    serializer_class = JokeSerializer
+
+    def get(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        if not queryset.exists():
+            return Response({"message": "Currently there are no jokes available."}, status=status.HTTP_204_NO_CONTENT)
+        import random
+        random_number = random.randint(0, queryset.count() - 1)
+        joke = queryset[random_number]
+        serializer = self.get_serializer(joke)
+        return Response(serializer.data)
+
+# todo: Version2
+#   deleting is for the author or the superuser only
+#   post and patch is allowed for authenticated users only
+#   if not authenticated, one custom response message for post patch (saying that authentication is needed) and one for delete (saying that only the author can delete it)
