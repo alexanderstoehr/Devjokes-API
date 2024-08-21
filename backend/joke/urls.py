@@ -1,8 +1,10 @@
 from django.urls import path
 
+from joke.views import ListCreateJokeView, SearchJokeView, RetrieveUpdateDestroyJokeView, RandomJokeView
+
 urlpatterns = [
-    path('', JokeView.as_view()),
-    path('<int:pk>/', SingleJokeView.as_view()),
+    path('', ListCreateJokeView.as_view()),
+    path('<int:pk>/', RetrieveUpdateDestroyJokeView.as_view()),
     path('search/', SearchJokeView.as_view()),
     path('random/', RandomJokeView.as_view()),
     ]
