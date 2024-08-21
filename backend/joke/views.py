@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
+from joke.models import Joke
+from joke.serializers import JokeSerializer
+
 
 # Create your views here.
 
 # create a view to list all the jokes
 # create a view to post a joke
 class ListCreateJokeView(ListCreateAPIView):
+    queryset = Joke.objects.all()
+    serializer_class = JokeSerializer
     pass
 
 
