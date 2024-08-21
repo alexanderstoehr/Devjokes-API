@@ -126,6 +126,57 @@ export const JokeButtonStyled = styled.button`
 
 `;
 
+export const SectionStyled = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .section-head {
+        padding: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`
+
+export const TabContainerStyled = styled.div`
+    display: flex;
+    gap: 2rem;
+`
+export const TabNavStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+`
+
+export const TabContentStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: dashed pink 1px;
+    padding: 1.5rem;
+
+    .description {
+        font-weight: bold;
+    }
+
+    .endpoint {
+        font-size: 0.8rem;
+        padding: 0 0 1rem 0;
+    }
+`
+export const TabCodeAreaStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: #2C2C35;
+    padding: 2rem;
+
+
+`
+
 
 export const StackBoxStyled = styled.footer`
     position: relative;

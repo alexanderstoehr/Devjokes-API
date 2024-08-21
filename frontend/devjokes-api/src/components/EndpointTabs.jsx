@@ -1,7 +1,14 @@
-export default function EndpointTabs () {
+import {SectionStyled} from "../styles/globalStyles.js";
+import TabContainer from "./Tabs/TabContainer.jsx";
+
+export default function EndpointTabs() {
     return (
-        <div>
-            <h1>Endpoint Tabs</h1>
-        </div>
+        <SectionStyled>
+            <div className="section-head">
+                <h1>CRUD A JOKE</h1>
+                Create, read, update, and delete any joke.
+            </div>
+            <TabContainer/>
+        </SectionStyled>
     )
 }
