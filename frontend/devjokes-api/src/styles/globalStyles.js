@@ -144,19 +144,33 @@ export const SectionStyled = styled.section`
 export const TabContainerStyled = styled.div`
     display: flex;
     gap: 2rem;
+
 `
 export const TabNavStyled = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
+    padding: 1rem 0 2rem 0;
 
+    img {
+        width: 50px;
+    }
+
+`
+
+export const TabNavItemStyled = styled.div`
+    color: var(--color-font-bright);
+    cursor: pointer;
 `
 
 export const TabContentStyled = styled.div`
     display: flex;
     flex-direction: column;
-    border: dashed pink 1px;
+    //border: dashed pink 1px;
     padding: 1.5rem;
+    background-image: var(--dashed-border);
+    border-radius: 5px;
 
     .description {
         font-weight: bold;
