@@ -1,5 +1,6 @@
+from django.db.models import Q
 from django.shortcuts import render
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView
 
 from joke.models import Joke
 from joke.serializers import JokeSerializer
@@ -12,7 +13,6 @@ from joke.serializers import JokeSerializer
 class ListCreateJokeView(ListCreateAPIView):
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
-    pass
 
 
 # create a view to delete a joke
@@ -21,12 +21,16 @@ class ListCreateJokeView(ListCreateAPIView):
 class RetrieveUpdateDestroyJokeView(RetrieveUpdateDestroyAPIView):
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
-    pass
 
 
 # create a view to search for a joke
-class SearchJokeView(ListCreateAPIView):
-    pass
+class SearchJokeView(ListAPIView):
+    queryset = Joke.objects.all()
+    serializer_class = JokeSerializer
+
+    def get_queryset(self, *args, **kwargs):
+        search_term = self.kwargs['search_term']
+        return Joke.objects.filter(Q(punchline__icontains=search_term) | Q(question__icontains=search_term))  # icontains is case insensitive
 
 
 # create a view to get a random joke
