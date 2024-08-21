@@ -1,5 +1,7 @@
 from django.db.models import Q
 from django.shortcuts import render
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
@@ -13,6 +15,13 @@ from joke.serializers import JokeSerializer
 # view to list all the jokes
 # view to post a joke
 class ListCreateJokeView(ListCreateAPIView):
+    '''
+    get:
+    Get a list of all jokes.
+
+    post:
+    Post a new joke.
+    '''
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
 
@@ -21,12 +30,29 @@ class ListCreateJokeView(ListCreateAPIView):
 # view to patch a joke
 # view to get a single joke
 class RetrieveUpdateDestroyJokeView(RetrieveUpdateDestroyAPIView):
+    '''
+    get:
+    Get a single joke.
+
+    put:
+    Update a single joke with all fields.
+
+    patch:
+    Update a single joke with partial fields.
+
+    delete:
+    Delete a single joke.
+    '''
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
 
 
 # view to search for a joke
 class SearchJokeView(ListAPIView):
+    '''
+    get:
+    Search for a string in punchline and question fields.
+    '''
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
 
@@ -44,6 +70,11 @@ class SearchJokeView(ListAPIView):
 
 # view to get a random joke
 class RandomJokeView(RetrieveAPIView):
+    '''
+    get:
+    Get a random joke.
+    '''
+
     # get queryset length, get a random number, get the joke with that number
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer

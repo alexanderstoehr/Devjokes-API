@@ -1,0 +1,4 @@
+.swagger-ui .topbar {
+    background: url('/static/images/logo-as.svg') no-repeat center center;
+    background-size: contain;
+}
