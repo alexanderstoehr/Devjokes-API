@@ -19,6 +19,8 @@ class ListCreateJokeView(ListCreateAPIView):
 # create a view to patch a joke
 # create a view to get a single joke
 class RetrieveUpdateDestroyJokeView(RetrieveUpdateDestroyAPIView):
+    queryset = Joke.objects.all()
+    serializer_class = JokeSerializer
     pass
 
 
