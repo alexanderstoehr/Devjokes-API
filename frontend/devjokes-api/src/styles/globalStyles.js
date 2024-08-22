@@ -151,6 +151,8 @@ export const TabNavStyled = styled.div`
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem 0 2rem 0;
+    font-style: italic;
+    font-weight: medium;
 
     img {
         width: 50px;
@@ -162,6 +164,10 @@ export const TabNavItemStyled = styled.div`
     color: var(--color-font-bright);
     cursor: pointer;
     padding-bottom: 0.5rem;
+
+    .active {
+        color: var(--color-pink);
+    }
 
 `
 
