@@ -174,7 +174,7 @@ export const TabNavItemStyled = styled.div`
 export const TabContentStyled = styled.div`
     display: flex;
     flex-direction: column;
-    //border: dashed pink 1px;
+    min-width: 775px;
     padding: 1.5rem;
     background-image: var(--dashed-border);
     border-radius: 5px;
@@ -190,12 +190,14 @@ export const TabContentStyled = styled.div`
 `
 export const TabCodeAreaStyled = styled.div`
     display: flex;
+
     flex-direction: column;
     border-radius: 4px;
     background: #2C2C35;
     padding: 2rem;
     font-family: var(--font-family-code);
     font-size: 0.8rem;
+    min-height: 250px;
 
 
 `
