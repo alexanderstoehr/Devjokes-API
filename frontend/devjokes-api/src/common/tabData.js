@@ -1,6 +1,6 @@
 const tabData = [
     {
-        id: 1,
+        id: "get-all-jokes",
         title: "Get all Jokes",
         description: "Get all jokes from the database",
         endpoint: "/joke/",
@@ -20,7 +20,7 @@ const tabData = [
 
     },
     {
-        id: 2,
+        id: "get-specific-joke",
         title: "Get a single Joke",
         description: "Get a specific joke by ID",
         endpoint: "/joke/{ID}",
@@ -37,7 +37,7 @@ const tabData = [
 
     },
     {
-        id: 3,
+        id: "delete-a-joke",
         title: "Delete a Joke",
         description: "Delete a specific joke by ID",
         endpoint: "/joke/{ID}",
@@ -53,7 +53,7 @@ const tabData = [
     },
 
     {
-        id: 4,
+        id: "post-a-joke",
         title: "Post a Joke",
         description: "Add a Joke to the database",
         endpoint: "/joke/",
@@ -68,7 +68,7 @@ const tabData = [
 
     },
     {
-        id: 5,
+        id: "patch-a-joke",
         title: "Patch a Joke",
         description: "Partial update of a Joke in the database",
         endpoint: "/joke/",
@@ -82,7 +82,7 @@ const tabData = [
 
     },
     {
-        id: 6,
+        id: "search-for-jokes",
         title: "Search for Jokes",
         description: "Get all jokes from the database, containing a string in question or punchline",
         endpoint: "/joke/search/{search_term}",
