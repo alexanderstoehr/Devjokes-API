@@ -214,6 +214,7 @@ export const StackBoxStyled = styled.footer`
     width: 450px;
     border-radius: var(--border-radius-big);
     background-image: var(--gradient);
+    margin-bottom: 2rem;
 
     &::before {
         content: "";
