@@ -50,6 +50,11 @@ class RetrieveUpdateDestroyJokeView(RetrieveUpdateDestroyAPIView):
     queryset = Joke.objects.all()
     serializer_class = JokeSerializer
 
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_Object()
+        self.perform_destroy(instance
+        return Response({"message": "Joke deleted successfully. One thing less to laugh about."}, status=status.HTTP_204_NO_CONTENT)
+
 
 # view to search for a joke
 class SearchJokeView(ListAPIView):

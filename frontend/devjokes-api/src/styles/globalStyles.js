@@ -150,7 +150,6 @@ export const TabNavStyled = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
     padding: 1rem 0 2rem 0;
 
     img {
@@ -162,6 +161,8 @@ export const TabNavStyled = styled.div`
 export const TabNavItemStyled = styled.div`
     color: var(--color-font-bright);
     cursor: pointer;
+    padding-bottom: 0.5rem;
+
 `
 
 export const TabContentStyled = styled.div`
@@ -187,6 +188,8 @@ export const TabCodeAreaStyled = styled.div`
     border-radius: 4px;
     background: #2C2C35;
     padding: 2rem;
+    font-family: var(--font-family-code);
+    font-size: 0.8rem;
 
 
 `

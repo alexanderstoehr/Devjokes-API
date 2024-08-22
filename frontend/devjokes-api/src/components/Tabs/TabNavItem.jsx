@@ -1,9 +1,9 @@
 import {TabNavItemStyled} from "../../styles/globalStyles.js";
 
-export default function TabNavItem() {
+export default function TabNavItem({item}) {
     return (
         <TabNavItemStyled>
-            <a>Tab Button</a>
+            <a>{item.title}</a>
         </TabNavItemStyled>
     )
 }
