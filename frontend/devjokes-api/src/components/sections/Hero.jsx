@@ -1,6 +1,6 @@
-import {HeroStyled} from "../styles/globalStyles.js";
-import JokeButton from "./JokeButton.jsx";
-import Joke from "./Joke.jsx";
+import {HeroStyled} from "../../styles/globalStyles.js";
+import JokeButton from "../JokeButton.jsx";
+import Joke from "../Joke.jsx";
 
 export default function Hero() {
     return (

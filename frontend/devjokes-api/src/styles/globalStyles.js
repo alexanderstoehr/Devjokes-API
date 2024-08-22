@@ -234,3 +234,22 @@ export const StackBoxStyled = styled.footer`
     }
 
 `;
+
+export const EmbedJokeCodeAreaStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-image: var(--dashed-border);
+    font-family: var(--font-family-code);
+    font-size: 0.8rem;
+    min-height: 150px;
+    width: 100%;
+
+    .embed-code-area {
+        border-radius: 4px;
+        background: #2C2C35;
+        padding: 1.5rem;
+        height: 150px;
+    }
+
+`

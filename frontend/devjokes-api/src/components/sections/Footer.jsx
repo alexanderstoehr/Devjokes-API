@@ -1,4 +1,4 @@
-import {StackBoxStyled} from "../styles/globalStyles.js";
+import {StackBoxStyled} from "../../styles/globalStyles.js";
 
 export default function Footer() {
     return (

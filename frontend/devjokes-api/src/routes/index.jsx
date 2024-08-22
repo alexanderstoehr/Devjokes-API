@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./home.jsx";
 import FourOhFour from "./404.jsx";
-import TabContent from "../components/Tabs/TabContent.jsx";
+import TabContent from "../components/tabs/TabContent.jsx";
 
 
 export default function Router() {

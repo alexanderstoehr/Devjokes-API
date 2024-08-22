@@ -1,5 +1,5 @@
-import {SectionStyled} from "../styles/globalStyles.js";
-import TabContainer from "./Tabs/TabContainer.jsx";
+import {SectionStyled} from "../../styles/globalStyles.js";
+import TabContainer from "../tabs/TabContainer.jsx";
 
 export default function EndpointTabs() {
     return (
