@@ -60,6 +60,7 @@ export const HeaderStyled = styled.header`
 
 export const JokeCardStyled = styled.div`
     display: flex;
+    justify-self: flex-end;
     flex-direction: column;
     justify-content: space-between;
     width: 420px;
@@ -95,6 +96,7 @@ export const HeroStyled = styled.section`
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0 1rem;
 
     .hero-text {
         padding-bottom: 4rem;
@@ -123,6 +125,13 @@ export const JokeButtonStyled = styled.button`
     font-weight: 600;
     line-height: 150%;
     border-radius: var(--border-radius-small);
+    cursor: pointer;
+
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+    }
 
 `;
 
@@ -138,24 +147,50 @@ export const SectionStyled = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .arrow-item {
+        display: flex;
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: -200px;
+        margin-bottom: -25px;
+
+
+        img {
+            margin: 1rem 0.5rem 0 0;
+        }
+
+
+        .arrow-text {
+            display: flex;
+            flex-direction: column;;
+
+        }
     }
 `
 
 export const TabContainerStyled = styled.div`
     display: flex;
     gap: 2rem;
+    position: relative;
 
 `
 export const TabNavStyled = styled.div`
     display: flex;
+    position: absolute;
+    left: -175px;
     flex-direction: column;
-    justify-content: space-between;
+    //justify-content: space-between;
     padding: 1rem 0 2rem 0;
     font-style: italic;
-    font-weight: medium;
+    font-weight: 500;
 
     img {
         width: 50px;
+        margin: 2rem 0 0 -10px;
     }
 
 `
@@ -254,3 +289,61 @@ export const EmbedJokeCodeAreaStyled = styled.div`
     }
 
 `
+
+export const VideoEmbedStyled = styled.div`
+    display: flex;
+    position: relative;
+    //justify-content: center;
+    //align-items: center;
+
+    .arrow-item {
+        display: flex;
+        justify-content: center;
+        position: absolute; /* Position the arrow-item absolutely */
+        top: 50%; /* Align it to the bottom */
+        left: -200px; /* Align it to the right */
+
+
+        img {
+            width: 100px;
+            margin: -50px 0 0 0.5rem;
+        }
+
+        .arrow-text {
+            display: flex;
+            flex-direction: column;
+            //justify-content: flex-end;
+
+        }
+
+    }
+
+    .video-frame {
+    }
+`
+
+export const FooterStyled = styled.footer`
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+
+    .arrow-item {
+        display: flex;
+        position: absolute;
+        right: -200px;
+        top: -75px;
+
+        img {
+            margin: 0 0.5rem 0 0;
+            width: 100px;
+
+            .arrow-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+            }
+
+        }
+`
+
