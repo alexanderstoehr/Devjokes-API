@@ -71,6 +71,9 @@ body {
     min-height: 100vh;
     background-color: var(--color-dark);
     color: var(--color-font-bright);
+    position: relative;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -86,6 +89,26 @@ body::before {
     pointer-events: none; /* Ensure the overlay does not interfere with interactions */
 }
 
+.arrow1-middle-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.arrow3-middle-left {
+    position: absolute;
+    top: 10%;
+    left: 0;
+
+}
+
+.arrow2-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+
+}
 
 h1 {
     font-size: var(--fontsize-title);
