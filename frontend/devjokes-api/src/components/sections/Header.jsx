@@ -9,7 +9,7 @@ export default function Header() {
                     <ul>
                         <li><a href="/devjokes-api/public#jokes">RANDOM JOKE</a></li>
                         <li><a href="/devjokes-api/public#memes">CRUD A JOKE</a></li>
-                        <li><a href="/devjokes-api/public#videos">MAKE YOUR PROJECT A JOKE</a></li>
+                        <li><a href="/devjokes-api/public#videos">JOKE IN A PROJECT</a></li>
                     </ul>
                 </nav>
             </div>

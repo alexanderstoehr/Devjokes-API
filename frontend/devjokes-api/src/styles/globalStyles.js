@@ -5,13 +5,17 @@ export const MainContentStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1000px;
+    width: 100%;
     min-height: 100vh;
     padding: 0 20px;
     gap: 8rem;
 `;
 
 export const HeaderStyled = styled.header`
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,6 +94,21 @@ export const JokeCardStyled = styled.div`
 `;
 
 export const HeroStyled = styled.section`
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -152,6 +171,9 @@ export const SectionStyled = styled.section`
     }
 
     .arrow-item {
+        @media (max-width: 768px) {
+            display: none;
+        }
         display: flex;
         align-self: flex-end;
         margin-left: auto;
@@ -173,12 +195,39 @@ export const SectionStyled = styled.section`
 `
 
 export const TabContainerStyled = styled.div`
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .endpoint-items {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            justify-content: center;
+
+        }
+
+        img {
+            display: none;
+        }
+    }
+
     display: flex;
     gap: 2rem;
     position: relative;
 
 `
 export const TabNavStyled = styled.div`
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        position: relative;
+        left: 0;
+    }
     display: flex;
     position: absolute;
     left: -175px;
@@ -297,6 +346,9 @@ export const VideoEmbedStyled = styled.div`
     //align-items: center;
 
     .arrow-item {
+        @media (max-width: 768px) {
+            display: none;
+        }
         display: flex;
         justify-content: center;
         position: absolute; /* Position the arrow-item absolutely */
@@ -328,6 +380,9 @@ export const FooterStyled = styled.footer`
     position: relative;
 
     .arrow-item {
+        @media (max-width: 768px) {
+            display: none;
+        }
         display: flex;
         position: absolute;
         right: -200px;
