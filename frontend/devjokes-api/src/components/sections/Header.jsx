@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <HeaderStyled>
             <div className="nav-box">
-                <a className="grower" href="/devjokes-api/public"> <img src="/logo-as.svg" alt="DevJokes Logo"/></a>
+                <a className="grower" href="/"> <img src="/logo-as.svg" alt="DevJokes Logo"/></a>
                 <nav>
                     <ul>
                         <li><a href="#jokes">RANDOM JOKE</a></li>
