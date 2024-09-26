@@ -90,12 +90,18 @@ body::before {
 }
 
 .arrow1-middle-right {
+    @media (max-width: 768px) {
+        display: none;
+    }
     position: absolute;
     top: 50%;
     right: 0;
 }
 
 .arrow3-middle-left {
+    @media (max-width: 768px) {
+        display: none;
+    }
     position: absolute;
     top: 10%;
     left: 0;
@@ -103,6 +109,9 @@ body::before {
 }
 
 .arrow2-bottom-left {
+    @media (max-width: 768px) {
+        display: none;
+    }
     position: absolute;
     bottom: 0;
     left: 0;
