@@ -1,0 +1,4 @@
+[build]
+base = "frontend/devjokes-api"
+publish = "dist"
+command = "npm run build"
