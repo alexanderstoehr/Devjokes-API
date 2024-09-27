@@ -14,6 +14,10 @@ export const MainContentStyled = styled.div`
 export const HeaderStyled = styled.header`
     @media (max-width: 768px) {
         justify-content: center;
+
+        img.logo {
+            display: none
+        }
     }
 
     display: flex;
@@ -227,6 +231,14 @@ export const TabNavStyled = styled.div`
         gap: 0;
         position: relative;
         left: 0;
+
+        .endpoint-items {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            justify-content: space-between;
+        }
     }
     display: flex;
     position: absolute;
@@ -245,6 +257,15 @@ export const TabNavStyled = styled.div`
 `
 
 export const TabNavItemStyled = styled.div`
+    @media (max-width: 768px) {
+        border: 1px solid var(--color-font-bright);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 10px;
+        
+    }
     color: var(--color-font-bright);
     cursor: pointer;
     padding-bottom: 0.5rem;
@@ -256,6 +277,11 @@ export const TabNavItemStyled = styled.div`
 `
 
 export const TabContentStyled = styled.div`
+    @media (max-width: 768px) {
+        justify-content: center;
+        min-width: 475px;
+    }
+
     display: flex;
     flex-direction: column;
     min-width: 775px;
