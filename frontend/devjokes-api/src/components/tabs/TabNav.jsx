@@ -8,7 +8,7 @@ export default function TabNav() {
 
     return (
         <TabNavStyled>
-            <div className="endpoint-items">{navItems.map((item) => (
+            <div className=" desktop endpoint-items">{navItems.map((item) => (
                 <TabNavItem key={item.id} item={item}/>
             ))}
             </div>
