@@ -5,6 +5,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    max-width: 100%;
+
 }
 
 :root {
@@ -32,7 +34,7 @@
 
     /*Fonts*/
     --fontsize-nav: 1rem;
-    --fontsize-title: 2.5rem;
+    --fontsize-title: 1.75rem;
     --fontsize-subtitle: 1rem;
     --fontsize-tabnav: 0.8rem;
     --fontsize-sectiontitle: 1.75rem;
@@ -74,6 +76,8 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+
 
 }
 

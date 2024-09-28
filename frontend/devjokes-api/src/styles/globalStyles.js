@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 
 export const MainContentStyled = styled.div`
+    @media (max-width: 768px) {
+        padding: 0;
+        width: 100%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,11 +17,17 @@ export const MainContentStyled = styled.div`
 
 export const HeaderStyled = styled.header`
     @media (max-width: 768px) {
-        justify-content: center;
+        width: 100%;
 
-        img.logo {
+        .desktopmenu {
             display: none
         }
+
+        .mobilemenu {
+            display: flex !important;
+            justify-content: center;
+        }
+
     }
 
     display: flex;
@@ -26,6 +36,11 @@ export const HeaderStyled = styled.header`
     width: 100%;
     padding: 20px 0;
     margin-bottom: -6rem;
+
+    .mobilemenu {
+        display: none;
+    }
+;
 
     .nav-box {
         display: flex;
@@ -66,98 +81,6 @@ export const HeaderStyled = styled.header`
 `;
 
 
-export const JokeCardStyled = styled.div`
-    display: flex;
-    justify-self: flex-end;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 420px;
-    height: 400px;
-    background-image: var(--gradient);
-    border-radius: var(--border-radius-big);
-    padding: 5rem 3rem 3rem 3rem;
-    color: var(--color-font-bright);
-
-    .question {
-        font-size: var(--fontsize-cardquestion);
-        font-weight: var(--fontweight-card);
-        line-height: 34px; /* 121.429% */
-        margin-bottom: 1rem;
-
-    }
-
-    .punchline {
-        font-size: var(--fontsize-cardpunchline);
-        font-weight: var(--fontweight-card);
-    }
-
-    img {
-        width: 50px;
-        justify-self: flex-end;
-    }
-`;
-
-export const HeroStyled = styled.section`
-    @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0;
-
-        .hero-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-    }
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-
-    .hero-text {
-        padding-bottom: 4rem;
-    }
-
-    h1 {
-        line-height: 70%;
-    }
-
-    h2 {
-        margin-bottom: 2rem;
-    }
-
-`;
-
-export const JokeButtonStyled = styled.button`
-    display: flex;
-    width: 250px;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    background-color: ${(props) => `var(${props.color})`};
-    color: var(--color-font-bright);
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 150%;
-    border-radius: var(--border-radius-small);
-    cursor: pointer;
-
-
-    &:hover {
-        transform: scale(1.02);
-        transition: all 0.2s ease-in-out;
-    }
-
-`;
-
 export const SectionStyled = styled.section`
     display: flex;
     flex-direction: column;
@@ -197,6 +120,119 @@ export const SectionStyled = styled.section`
         }
     }
 `
+export const HeroStyled = styled.section`
+    @media (max-width: 768px) {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+
+    .hero-text {
+        padding-bottom: 4rem;
+    }
+
+    h1 {
+        line-height: 70%;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+`;
+
+export const JokeCardStyled = styled.div`
+    @media (max-width: 768px) {
+        width: 85%;
+        height: 85%;
+        padding: 1rem;
+
+        .question {
+            font-size: 1.25rem !important;
+            line-height: 140% !important;
+        }
+
+        .punchline {
+            font-size: 1.05rem !important;
+            line-height: 140% !important;
+            margin-bottom: 2rem;
+        }
+
+        img {
+            width: 30px !important;
+        }
+    }
+
+    display: flex;
+    justify-self: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 420px;
+    height: 400px;
+    background-image: var(--gradient);
+    border-radius: var(--border-radius-big);
+    padding: 5rem 3rem 3rem 3rem;
+    color: var(--color-font-bright);
+
+    .question {
+        font-size: var(--fontsize-cardquestion);
+        font-weight: var(--fontweight-card);
+        line-height: 34px; /* 121.429% */
+        margin-bottom: 1rem;
+
+    }
+
+    .punchline {
+        font-size: var(--fontsize-cardpunchline);
+        font-weight: var(--fontweight-card);
+    }
+
+    img {
+        width: 50px;
+        justify-self: flex-end;
+    }
+`;
+export const JokeButtonStyled = styled.button`
+    display: flex;
+    width: 250px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: ${(props) => `var(${props.color})`};
+    color: var(--color-font-bright);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+
+
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+    }
+
+`;
+
 
 export const TabContainerStyled = styled.div`
     @media (max-width: 768px) {
@@ -224,20 +260,8 @@ export const TabContainerStyled = styled.div`
 `
 export const TabNavStyled = styled.div`
     @media (max-width: 768px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 0;
-        position: relative;
-        left: 0;
-
-        .endpoint-items {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 1rem;
-            justify-content: space-between;
+        .desktop {
+            display: none;
         }
     }
     display: flex;
@@ -264,7 +288,7 @@ export const TabNavItemStyled = styled.div`
         align-items: center;
         border-radius: 5px;
         padding: 10px;
-        
+
     }
     color: var(--color-font-bright);
     cursor: pointer;
@@ -279,7 +303,8 @@ export const TabNavItemStyled = styled.div`
 export const TabContentStyled = styled.div`
     @media (max-width: 768px) {
         justify-content: center;
-        min-width: 475px;
+        min-width: 300px;
+        max-width: 350px;
     }
 
     display: flex;
@@ -313,39 +338,6 @@ export const TabCodeAreaStyled = styled.div`
 `
 
 
-export const StackBoxStyled = styled.footer`
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-    height: 70px;
-    width: 450px;
-    border-radius: var(--border-radius-big);
-    background-image: var(--gradient);
-    margin-bottom: 2rem;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
-        z-index: 1;
-        border-radius: var(--border-radius-big);
-
-    }
-
-    img {
-        height: 50px;
-        z-index: 2;
-    }
-
-`;
-
 export const EmbedJokeCodeAreaStyled = styled.div`
     display: flex;
     flex-direction: column;
@@ -366,15 +358,21 @@ export const EmbedJokeCodeAreaStyled = styled.div`
 `
 
 export const VideoEmbedStyled = styled.div`
+    @media (max-width: 768px) {
+        iframe {
+            width: 350px;
+        }
+
+        .arrow-item {
+            display: none !important;
+        }
+    }
     display: flex;
     position: relative;
     //justify-content: center;
     //align-items: center;
 
     .arrow-item {
-        @media (max-width: 768px) {
-            display: none;
-        }
         display: flex;
         justify-content: center;
         position: absolute; /* Position the arrow-item absolutely */
@@ -428,3 +426,35 @@ export const FooterStyled = styled.footer`
         }
 `
 
+export const StackBoxStyled = styled.footer`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    height: 70px;
+    /*width: 450px;*/
+    border-radius: var(--border-radius-big);
+    background-image: var(--gradient);
+    margin-bottom: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 1;
+        border-radius: var(--border-radius-big);
+
+    }
+
+    img {
+        height: 50px;
+        z-index: 2;
+    }
+
+`;
