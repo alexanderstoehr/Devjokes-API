@@ -436,6 +436,7 @@ export const FooterStyled = styled.footer`
 `
 
 export const StackBoxStyled = styled.footer`
+
     position: relative;
     display: flex;
     justify-content: center;
@@ -443,7 +444,7 @@ export const StackBoxStyled = styled.footer`
     gap: 2rem;
     padding: 1rem;
     height: 70px;
-    /*width: 450px;*/
+    width: 350px;
     border-radius: var(--border-radius-big);
     background-image: var(--gradient);
     margin-bottom: 2rem;
@@ -456,13 +457,13 @@ export const StackBoxStyled = styled.footer`
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.5);
-        z-index: 1;
+        z-index: 0;
         border-radius: var(--border-radius-big);
 
     }
 
     img {
-        height: 50px;
+        height: 40px;
         z-index: 2;
     }
 
