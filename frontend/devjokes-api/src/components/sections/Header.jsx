@@ -12,12 +12,12 @@ export default function Header() {
                         <li><a href="#videos">JOKE IN A PROJECT</a></li>
                     </ul>
                 </nav>
-                <nav className="mobilemenu">
-                    <img className="grower" src="/menu.svg" alt="menu"/>
-                </nav>
             </div>
             <a className="grower github" href="https://github.com/alexanderstoehr/Devjokes-API" target="_blank"><img
                 src="/logo-github.svg"/></a>
+            <nav className="mobilemenu">
+                <img className="grower" src="/menu.svg" alt="menu"/>
+            </nav>
         </HeaderStyled>
     )
 }

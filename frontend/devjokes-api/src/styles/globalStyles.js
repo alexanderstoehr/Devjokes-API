@@ -18,6 +18,10 @@ export const MainContentStyled = styled.div`
 export const HeaderStyled = styled.header`
     @media (max-width: 768px) {
         width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         .desktopmenu {
             display: none
@@ -25,8 +29,9 @@ export const HeaderStyled = styled.header`
 
         .mobilemenu {
             display: flex !important;
-            justify-content: center;
+            margin-top: -10px;
         }
+
 
     }
 
@@ -134,6 +139,7 @@ export const HeroStyled = styled.section`
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding-bottom: 1rem !important;
         }
 
     }
@@ -161,9 +167,10 @@ export const HeroStyled = styled.section`
 
 export const JokeCardStyled = styled.div`
     @media (max-width: 768px) {
-        width: 85%;
-        height: 85%;
-        padding: 1rem;
+        width: 80%;
+        height: 80%;
+        padding: 2rem;
+        box-sizing: border-box !important;
 
         .question {
             font-size: 1.25rem !important;
@@ -173,7 +180,7 @@ export const JokeCardStyled = styled.div`
         .punchline {
             font-size: 1.05rem !important;
             line-height: 140% !important;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
         }
 
         img {
@@ -238,6 +245,8 @@ export const TabContainerStyled = styled.div`
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 0;
 
         .endpoint-items {
@@ -304,7 +313,7 @@ export const TabContentStyled = styled.div`
     @media (max-width: 768px) {
         justify-content: center;
         min-width: 300px;
-        max-width: 350px;
+        max-width: 80%;
     }
 
     display: flex;
