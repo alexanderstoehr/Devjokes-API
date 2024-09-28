@@ -112,6 +112,7 @@ export const SectionStyled = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 2rem;
 
 
     .section-head {
