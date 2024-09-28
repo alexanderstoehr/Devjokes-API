@@ -2,7 +2,7 @@ import {SectionStyled, VideoEmbedStyled} from "../../styles/globalStyles.js";
 
 export default function VideoSection() {
     return (
-        <SectionStyled>
+        <SectionStyled id="videos">
             <div className="section-head">
                 <h1>Seriously</h1>
                 Imagine this track autoplayed here

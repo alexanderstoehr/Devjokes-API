@@ -30,6 +30,8 @@ export const HeaderStyled = styled.header`
         .mobilemenu {
             display: flex !important;
             margin-top: -10px;
+            cursor: pointer;
+            z-index: 100 !important;
         }
 
 
@@ -85,6 +87,25 @@ export const HeaderStyled = styled.header`
     }
 `;
 
+export const MobileMenuPopupStyled = styled.nav`
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-dark);
+        opacity: 0.9;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        padding: 4rem 0;
+        gap: 1rem;
+        border-radius: var(--border-radius-big);
+        font-size: var(--fontsize-nav);
+    }
+`
 
 export const SectionStyled = styled.section`
     display: flex;
