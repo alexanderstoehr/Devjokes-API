@@ -30,6 +30,8 @@ export const HeaderStyled = styled.header`
         .mobilemenu {
             display: flex !important;
             margin-top: -10px;
+            cursor: pointer;
+            z-index: 100 !important;
         }
 
 
@@ -85,12 +87,32 @@ export const HeaderStyled = styled.header`
     }
 `;
 
+export const MobileMenuPopupStyled = styled.nav`
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-dark);
+        opacity: 0.9;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        padding: 4rem 0;
+        gap: 1rem;
+        border-radius: var(--border-radius-big);
+        font-size: var(--fontsize-nav);
+    }
+`
 
 export const SectionStyled = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 2rem;
 
 
     .section-head {
@@ -436,6 +458,7 @@ export const FooterStyled = styled.footer`
 `
 
 export const StackBoxStyled = styled.footer`
+
     position: relative;
     display: flex;
     justify-content: center;
@@ -443,7 +466,7 @@ export const StackBoxStyled = styled.footer`
     gap: 2rem;
     padding: 1rem;
     height: 70px;
-    /*width: 450px;*/
+    width: 350px;
     border-radius: var(--border-radius-big);
     background-image: var(--gradient);
     margin-bottom: 2rem;
@@ -456,13 +479,13 @@ export const StackBoxStyled = styled.footer`
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.5);
-        z-index: 1;
+        z-index: 0;
         border-radius: var(--border-radius-big);
 
     }
 
     img {
-        height: 50px;
+        height: 40px;
         z-index: 2;
     }
 

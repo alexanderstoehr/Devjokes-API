@@ -29,7 +29,7 @@ export default function JokeButton() {
         return newItem
     }
 
-    console.log(pickRandomItem(buttonColors));
+    /*console.log(pickRandomItem(buttonColors));*/
 
     const handleClick = () => {
         setButtonColor(pickRandomItem(buttonColors, buttonColor));

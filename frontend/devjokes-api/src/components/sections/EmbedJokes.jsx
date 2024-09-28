@@ -3,7 +3,7 @@ import EmbedJokeCodeArea from "../EmbedJokeCodeArea.jsx";
 
 export default function EmbedJokes() {
     return (
-        <SectionStyled>
+        <SectionStyled id="embed">
             <div className="section-head">
                 <h1>Make your project a joke</h1>
                 Embed a joke in your project

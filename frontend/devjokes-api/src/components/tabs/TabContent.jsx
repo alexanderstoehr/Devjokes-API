@@ -5,7 +5,7 @@ import {TabContentStyled} from "../../styles/globalStyles.js";
 
 export default function TabContent({tabID}) {
     const tab = tabData.find(tab => tab.id === tabID)
-    console.log(tab.id)
+    /*console.log(tab.id)*/
 
     return (
         <TabContentStyled>

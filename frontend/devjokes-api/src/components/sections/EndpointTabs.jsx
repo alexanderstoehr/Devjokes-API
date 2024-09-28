@@ -3,7 +3,7 @@ import TabContainer from "../tabs/TabContainer.jsx";
 
 export default function EndpointTabs() {
     return (
-        <SectionStyled>
+        <SectionStyled id="crud">
             <div className="section-head">
                 <div className="arrow-item">
                     <img src="/arrow-ephermal.svg"/>
