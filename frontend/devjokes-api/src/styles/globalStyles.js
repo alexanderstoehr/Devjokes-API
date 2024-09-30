@@ -331,6 +331,20 @@ export const TabNavItemStyled = styled.div`
 
 `
 
+export const MobileTabNavStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 1rem;
+
+    img {
+        width: 50px;
+        cursor: pointer;
+    }
+
+`
+
 export const TabContentStyled = styled.div`
     @media (max-width: 768px) {
         justify-content: center;
