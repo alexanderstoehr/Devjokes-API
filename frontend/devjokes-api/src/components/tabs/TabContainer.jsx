@@ -10,13 +10,10 @@ export default function TabContainer() {
     const defaultTab = tabData[0].id
     const activeTab = id || defaultTab
 
-    const viewPortwidth = window.innerWidth
-
-
     return (
         <TabContainerStyled>
             <TabNav/>
-            {viewPortwidth < 768 && <MobileTabNav/>}
+            <MobileTabNav/>
             <TabContent tabID={activeTab}/>
         </TabContainerStyled>
     )

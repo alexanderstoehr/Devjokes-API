@@ -332,6 +332,9 @@ export const TabNavItemStyled = styled.div`
 `
 
 export const MobileTabNavStyled = styled.div`
+    @media (min-width: 768px) {
+        display: none
+    }
     display: flex;
     width: 80%;
     justify-content: space-between;
