@@ -333,12 +333,14 @@ export const TabNavItemStyled = styled.div`
 
 export const MobileTabNavStyled = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.5rem;
-    gap: 1rem;
+    gap: 2rem;
 
     img {
+        display: block;
         width: 50px;
         cursor: pointer;
     }

@@ -7,15 +7,23 @@ export default function MobileTabNav() {
     const mobileNavItems = tabData
     const [currentTab, setCurrentTab] = useState(0)
 
-    const navigateTabs = (id) => {
-        console.log(id)
+    const navigateTabs = (move) => {
+        if (currentTab + move < 0) {
+            setCurrentTab(mobileNavItems.length - 1)
+            return
+        }
+        if (currentTab + move >= mobileNavItems.length) {
+            setCurrentTab(0)
+            return
+        }
+        setCurrentTab(currentTab + move)
     }
 
     return (
         <MobileTabNavStyled>
-            <img src="/tab-arrow-left.svg" alt="navigate back"/>
+            <img className="grower" onClick={() => navigateTabs(-1)} src="/tab-arrow-left.svg" alt="navigate back"/>
             {mobileNavItems[currentTab].title}
-            <img src="/tab-arrow-right.svg" alt="navigate forward"/>
+            <img className="grower" onClick={() => navigateTabs(1)} src="/tab-arrow-right.svg" alt="navigate forward"/>
         </MobileTabNavStyled>
     )
 }
