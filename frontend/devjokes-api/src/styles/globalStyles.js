@@ -336,7 +336,7 @@ export const MobileTabNavStyled = styled.div`
         display: none
     }
     display: flex;
-    width: 80%;
+    width: 85%;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
