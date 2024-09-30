@@ -1,7 +1,7 @@
 import tabData from "../../common/tabData.js";
 import {useState} from "react";
 import {MobileTabNavStyled} from "../../styles/globalStyles.js";
-import {Navigate, NavLink, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
 export default function MobileTabNav() {
