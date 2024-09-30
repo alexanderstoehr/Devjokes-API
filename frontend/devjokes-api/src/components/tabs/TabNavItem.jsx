@@ -1,5 +1,5 @@
 import {TabNavItemStyled} from "../../styles/globalStyles.js";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export default function TabNavItem({item}) {
     return (
