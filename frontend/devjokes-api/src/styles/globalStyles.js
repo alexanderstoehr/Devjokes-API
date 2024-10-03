@@ -505,7 +505,7 @@ export const StackBoxStyled = styled.footer`
 
     img {
         height: 40px;
-        z-index: 2;
+        z-index: 200;
     }
 
 `;
