@@ -11,7 +11,6 @@ export default function Hero() {
     const newJoke = () => {
         let joke = jokes[Math.floor(Math.random() * jokes.length)];
         setRandomJoke(joke)
-        console.log(joke)
     }
 
 
