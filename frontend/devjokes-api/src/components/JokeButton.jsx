@@ -1,7 +1,7 @@
 import {JokeButtonStyled} from "../styles/globalStyles.js";
 import {useState} from "react";
 
-export default function JokeButton() {
+export default function JokeButton({joke}) {
 
     const buttonColors = [
         "--color-pink",
@@ -34,6 +34,7 @@ export default function JokeButton() {
     const handleClick = () => {
         setButtonColor(pickRandomItem(buttonColors, buttonColor));
         setButtonText(pickRandomItem(buttonTexts, buttonText));
+        joke();
 
     }
 
