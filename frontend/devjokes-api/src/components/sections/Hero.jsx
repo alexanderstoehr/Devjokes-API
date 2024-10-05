@@ -8,18 +8,12 @@ import {useState} from "react";
 export default function Hero() {
 
     const [randomJoke, setRandomJoke] = useState(jokes[0]);
-    const newJoke = () => {
-        //generate joke
-        let joke = jokes[Math.floor(Math.random() * jokes.length)];
-        //check if joke is not already in joke, else generate another joke
-        while (joke === randomJoke) {
-            joke = jokes[Math.floor(Math.random() * jokes.length)];
-        }
-        return joke
-    }
-
     const setJoke = () => {
-        setRandomJoke(newJoke())
+        let joke;
+        do {
+            joke = jokes[Math.floor(Math.random() * jokes.length)];
+        } while (joke === randomJoke);
+        setRandomJoke(joke);
     }
 
 
