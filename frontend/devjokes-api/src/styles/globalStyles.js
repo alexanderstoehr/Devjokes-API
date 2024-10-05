@@ -218,7 +218,7 @@ export const JokeCardStyled = styled.div`
     height: 400px;
     background-image: var(--gradient);
     border-radius: var(--border-radius-big);
-    padding: 5rem 3rem 3rem 3rem;
+    padding: 3rem 3rem 3rem 3rem;
     color: var(--color-font-bright);
 
     .question {

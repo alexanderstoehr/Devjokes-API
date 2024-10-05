@@ -8,9 +8,12 @@ import {useState} from "react";
 export default function Hero() {
 
     const [randomJoke, setRandomJoke] = useState(jokes[0]);
-    const newJoke = () => {
-        let joke = jokes[Math.floor(Math.random() * jokes.length)];
-        setRandomJoke(joke)
+    const setJoke = () => {
+        let joke;
+        do {
+            joke = jokes[Math.floor(Math.random() * jokes.length)];
+        } while (joke === randomJoke);
+        setRandomJoke(joke);
     }
 
 
@@ -19,7 +22,7 @@ export default function Hero() {
             <div className="hero-text">
                 <h1>DEVJOKES API</h1>
                 <h2>CRUD your Favourite jokes.</h2>
-                <JokeButton joke={newJoke}/>
+                <JokeButton joke={setJoke}/>
             </div>
             <Joke joke={randomJoke}/>
         </HeroStyled>
