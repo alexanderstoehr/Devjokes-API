@@ -1,9 +1,10 @@
 name: devjokes
 dependencies:
-    - python=3.12.4
-    - pip=24.2
-    - pip:
-        - django==5.1
-        - djangorestframework==3.15.2
-        - djangorestframework-simplejwt==5.3.1
-        - drf-yasg==1.21.7
+  - python=3.12.4
+  - pip=24.2
+  - pip:
+      - django==5.1
+      - djangorestframework==3.15.2
+      - djangorestframework-simplejwt==5.3.1
+      - drf-yasg==1.21.7
+      - pysqlite3==0.5.3
