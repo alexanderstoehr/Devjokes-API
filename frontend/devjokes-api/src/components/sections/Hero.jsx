@@ -1,13 +1,29 @@
 import {HeroStyled} from "../../styles/globalStyles.js";
 import JokeButton from "../JokeButton.jsx";
 import Joke from "../Joke.jsx";
-import jokes from "../../common/dummyJokes.js";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {api} from "../../common/api.js";
 
 
 export default function Hero() {
+    const [jokes, setJokes] = useState([]);
+    const [randomJoke, setRandomJoke] = useState(null);
 
-    const [randomJoke, setRandomJoke] = useState(jokes[0]);
+    useEffect(() => {
+        const fetchJokes = async () => {
+            try {
+                const res = await api.get("/joke/");
+                setJokes(res.data);
+                setRandomJoke(res.data[0]);
+            } catch (error) {
+                console.error("Error fetching jokes:", error);
+            }
+        }
+        fetchJokes();
+
+    }, []);
+
+
     const setJoke = () => {
         let joke;
         do {
