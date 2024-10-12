@@ -9,3 +9,4 @@ dependencies:
       - drf-yasg==1.21.7
       - pysqlite3==0.5.3
       - django-cors-headers==4.4.0
+      - gunicorn==23.0.0
