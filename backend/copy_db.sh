@@ -1,2 +1,2 @@
 #!/bin/sh
-cp ./db.sqlite3 /app/db.sqlite3
+cp $SQLITE_DB_PATH /app/db.sqlite3
