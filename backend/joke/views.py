@@ -51,7 +51,7 @@ class RetrieveUpdateDestroyJokeView(RetrieveUpdateDestroyAPIView):
     serializer_class = JokeSerializer
 
     def destroy(self, request, *args, **kwargs):
-        instance = self.get_Object()
+        instance = self.get_object()
         self.perform_destroy(instance)
         return Response({"message": "Joke deleted successfully. One thing less to laugh about."}, status=status.HTTP_204_NO_CONTENT)
 
