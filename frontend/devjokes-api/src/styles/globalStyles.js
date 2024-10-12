@@ -207,6 +207,9 @@ export const JokeCardStyled = styled.div`
 
         img {
             width: 30px !important;
+
+            .easeIn {
+            }
         }
     }
 

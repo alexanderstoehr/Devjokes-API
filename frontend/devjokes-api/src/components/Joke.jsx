@@ -2,7 +2,19 @@ import {JokeCardStyled} from "../styles/globalStyles.js";
 
 
 export default function Joke({joke}) {
-
+    if (!joke) {
+        return <JokeCardStyled>
+            <div className="joke">
+                <div className="question">
+                    &nbsp;
+                </div>
+                <div className="punchline">
+                    &nbsp;
+                </div>
+            </div>
+            <img className="easeIn" src="/4chan-jokeface.svg"/>
+        </JokeCardStyled>
+    }
 
     return (
         <JokeCardStyled>
