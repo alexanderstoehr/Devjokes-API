@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['devjokes-api-e9816b00214e.herokuapp.com']
+ALLOWED_HOSTS = ['devjokes-api-e9816b00214e.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -138,8 +141,8 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle'
         ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '1/second',
-        'user': '2/second'
+        'anon': '10/second',
+        'user': '20/second'
         }
     }
 

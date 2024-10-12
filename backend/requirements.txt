@@ -9,6 +9,7 @@ inflection==0.5.1
 packaging==24.1
 PyJWT==2.9.0
 pysqlite3==0.5.3
+python-dotenv==1.0.1
 pytz==2024.1
 PyYAML==6.0.2
 setuptools==72.1.0
