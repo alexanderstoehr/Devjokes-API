@@ -310,6 +310,7 @@ export const TabNavStyled = styled.div`
 
     .postman {
         display: inline-block;
+        z-index: 1000;
 
         img {
             width: 50px;
