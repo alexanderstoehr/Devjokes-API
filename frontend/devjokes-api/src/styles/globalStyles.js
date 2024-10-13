@@ -307,10 +307,18 @@ export const TabNavStyled = styled.div`
     font-style: italic;
     font-weight: 500;
 
-    img {
-        width: 50px;
-        margin: 2rem 0 0 -10px;
+
+    .postman {
+        display: inline-block;
+
+        img {
+            width: 50px;
+            margin: 2rem 0 0 -10px;
+        }
+
     }
+
+
 
 `
 
